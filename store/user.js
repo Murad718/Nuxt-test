@@ -24,6 +24,7 @@ export const actions = {
 	async logout({commit}){	
 		try{
      	localStorage.removeItem('token');
+	localStorage.removeItem('user');
      	commit('setLoginIn', false);
     }catch (err) {
       console.log(err)
